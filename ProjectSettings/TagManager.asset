@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Wall
+  - PickUp
+  - Shredder
+  - Bullet
+  - Enemy
+  - EnemyBullet
+  - DamageBoost
+  - Key
+  - Door
+  - SpeedShoot
+  - HealthMax
+  - Explosion
+  - IceBoost
+  - Money
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Obstacle
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Effekt
+    uniqueID: 3913408199
+    locked: 0
+  - name: Player
+    uniqueID: 1559841639
+    locked: 0
+  - name: Enemy
+    uniqueID: 2498413207
+    locked: 0
+  - name: Text
+    uniqueID: 429404455
+    locked: 0
+  - name: image
+    uniqueID: 2568231835
+    locked: 0
