@@ -18,6 +18,11 @@ public class UpgradeCost : MonoBehaviour
     
     void Start()
     {
+        if (UpgradeManager.instance == null)
+        {
+            return;
+        }
+
         myButton = GetComponent<Button>();
         PlayerPrefs.SetFloat("LastHealth", UpgradeManager.instance.showHealth);
         PlayerPrefs.Save();
@@ -35,9 +40,13 @@ public class UpgradeCost : MonoBehaviour
         PlayerPrefs.Save();
     }
 
-    
     void Update()
     {
+        if (UpgradeManager.instance == null)
+        {
+            return;
+        }
+        
         if(UpgradeManager.instance.money < UpgradeManager.instance.upgradeCostHealth && myIndex == 0)
         {
             myButton.interactable = false;
@@ -148,30 +157,71 @@ public class UpgradeCost : MonoBehaviour
     }
     public void SubtractMoneyHealth()
     {
+        if (UpgradeManager.instance == null)
+        {
+            return;
+        }
+
         UpgradeManager.instance.money -= UpgradeManager.instance.upgradeCostHealth;   
     }
+
     public void SubtractMoneyDamage()
     {
+        if (UpgradeManager.instance == null)
+        {
+            return;
+        }
+
         UpgradeManager.instance.money -= UpgradeManager.instance.upgradeCostDamage;   
     }
+
     public void SubtractMoneySpeed()
     {
+        if (UpgradeManager.instance == null)
+        {
+            return;
+        }
+
         UpgradeManager.instance.money -= UpgradeManager.instance.upgradeCostSpeed;   
     }
+
     public void SubtractMoneyBoostTime()
     {
+        if (UpgradeManager.instance == null)
+        {
+            return;
+        }
+
         UpgradeManager.instance.money -= UpgradeManager.instance.upgradeCostBoostTime;   
     }
+
     public void SubtractMoneyDash()
     {
+        if (UpgradeManager.instance == null)
+        {
+            return;
+        }
+
         UpgradeManager.instance.money -= UpgradeManager.instance.upgradeCostDash;   
     }
+
     public void SubtractMoneyRegen()
     {
+        if (UpgradeManager.instance == null)
+        {
+            return;
+        }
+
         UpgradeManager.instance.money -= UpgradeManager.instance.upgradeCostRegeneration;   
     }
+
     public void SubtractMoneyBombs()
     {
+        if (UpgradeManager.instance == null)
+        {
+            return;
+        }
+
         UpgradeManager.instance.money -= UpgradeManager.instance.upgradeCostBombs;   
     }
 

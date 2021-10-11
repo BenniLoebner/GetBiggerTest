@@ -36,7 +36,7 @@ public class SelectedScene : MonoBehaviour
 
         savedSceneIndex = activeScene.buildIndex - 1;
         
-        if (5 != activeScene.buildIndex && 6 != activeScene.buildIndex)
+        if (6 != activeScene.buildIndex && 7 != activeScene.buildIndex)
         {
             PlayerPrefs.SetInt("SavedScene", SceneManager.GetActiveScene().buildIndex);
             PlayerPrefs.Save();

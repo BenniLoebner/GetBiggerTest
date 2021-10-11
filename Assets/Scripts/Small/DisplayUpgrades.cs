@@ -18,7 +18,7 @@ public class DisplayUpgrades : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {       
         if(Upgrades == 0)
         {
             UpgradeText.text = myUpgradeSystem.GetSpeedDisplay().ToString();
@@ -38,6 +38,7 @@ public class DisplayUpgrades : MonoBehaviour
         {
             UpgradeText.text = myUpgradeSystem.GetBoostTimeDisplay().ToString();
         }
+
         if(Upgrades == 4)
         {
             UpgradeText.text = myUpgradeSystem.GetDashDisplay().ToString();

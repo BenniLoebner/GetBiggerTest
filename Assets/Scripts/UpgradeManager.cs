@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 public class UpgradeManager : MonoBehaviour
 {
     public static UpgradeManager instance;
+    
     public float runSpeed = 25f;
     public int showSpeed = 1;
     public float health = 1;
@@ -49,6 +52,88 @@ public class UpgradeManager : MonoBehaviour
     public bool regenerationMax = false;
     Player player;
 
+    private static string settingsFileName = "upgradeSettings.upgs";
+    
+    #region SaveLoad Upgrade Settings
+
+    [RuntimeInitializeOnLoadMethod]
+    static void RunOnStart()
+    {
+        LoadUpgradeSettings();
+        Application.quitting += SaveUpgradeSettings;
+    }
+
+    static void LoadUpgradeSettings()
+    {
+        string path = $"{Application.persistentDataPath}/{settingsFileName}";
+        if (File.Exists(path))
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            using var stream = new FileStream(path, FileMode.Open);
+            UpgradeData data = formatter.Deserialize(stream) as UpgradeData;
+
+            instance.runSpeed = data.runSpeed;
+            instance.showSpeed = data.showSpeed;
+            instance.health = data.health;
+            instance.showHealth = data.showHealth;
+            instance.damage = data.damage;
+            instance.showDamage = data.showDamage;
+            instance.boostTime = data.boostTime;
+            instance.showBoostTime = data.showBoostTime;
+            instance.dashSpeed = data.dashSpeed;
+            instance.showDash = data.showDash;
+            instance.bombDamage = data.bombDamage;
+            instance.showBombs = data.showBombs;
+            instance.regeneration = data.regeneration;
+            instance.showRegeneration = data.showRegeneration;
+            instance.coolDownRegeneration = data.coolDownRegeneration;
+            instance.coolDownBombs = data.coolDownBombs;
+            instance.coolDownDash = data.coolDownDash;
+            instance.money = data.money;
+            instance.moneyPlus = data.moneyPlus;
+            instance.canDash = data.canDash;
+            instance.canPlaceBombs = data.canPlaceBombs;
+            instance.canRegenerate = data.canRegenerate;
+
+            instance.finishedLevel = data.finishedLevel;
+            instance.finishedObstacleLevel = data.finishedObstacleLevel;
+
+            instance.upgradeCostHealth = data.upgradeCostHealth;
+            instance.upgradeCostDamage = data.upgradeCostDamage;
+            instance.upgradeCostSpeed = data.upgradeCostSpeed;
+            instance.upgradeCostBoostTime = data.upgradeCostBoostTime;
+            instance.upgradeCostDash = data.upgradeCostDash;
+            instance.upgradeCostRegeneration = data.upgradeCostRegeneration;
+            instance.upgradeCostBombs = data.upgradeCostBombs;
+            instance.healthMax = data.healthMax;
+            instance.damageMax = data.damageMax;
+            instance.speedMax = data.speedMax;
+            instance.boostTimeMax = data.boostTimeMax;
+            instance.dashMax = data.dashMax;
+            instance.bombsMax = data.bombsMax;
+            instance.regenerationMax = data.regenerationMax;
+            Debug.Log($"Loaded upgrade settings from {path}");
+        }
+    }
+
+    static void SaveUpgradeSettings()
+    {
+        if(instance == null)
+        {
+            Debug.Log("Could not save UpgradeSettings");
+            return;
+        }
+        
+        string path = $"{Application.persistentDataPath}/{settingsFileName}";
+        BinaryFormatter formatter = new BinaryFormatter();
+        using var stream = new FileStream(path, FileMode.Create);
+        UpgradeData data = new UpgradeData(instance);
+        formatter.Serialize(stream, data);
+        Debug.Log($"Saved upgrade settings to {path}");
+    }
+
+    #endregion
+
     void Awake()
     {
         DontDestroyOnLoad(gameObject);
@@ -57,14 +142,75 @@ public class UpgradeManager : MonoBehaviour
         {
             instance = this;
         }
+
         if(instance != this)
         {
             Destroy(gameObject);
         }
+
+        Debug.Log(instance==null?"Instance is Null" : "Instance is not Null");
+
+        // StartCoroutine(SaveAndLoad());
     }
 
     void Update()
     {
         player = FindObjectOfType<Player>();
     }
+
+    /* IEnumerator SaveAndLoad()
+    {
+        while(true)
+        {
+            SaveSystem.SavePlayer();
+
+            UpgradeManager stats = SaveSystem.LoadStats();
+
+            runSpeed = stats.runSpeed;
+            showSpeed = stats.showSpeed;
+            health = stats.health;
+            showHealth = stats.showHealth;
+            damage = stats.damage;
+            showDamage = stats.showDamage;
+            boostTime = stats.boostTime;
+            showBoostTime = stats.showBoostTime;
+            dashSpeed = stats.dashSpeed;
+            showDash = stats.showDash;
+            bombDamage = stats.bombDamage;
+            showBombs = stats.showBombs;
+            regeneration = stats.regeneration;
+            showRegeneration = stats.showRegeneration;
+            coolDownRegeneration = stats.coolDownRegeneration;
+            coolDownBombs = stats.coolDownBombs;
+            coolDownDash = stats.coolDownDash;
+            money = stats.money;
+            moneyPlus = stats.moneyPlus;
+            canDash = stats.canDash;
+            canPlaceBombs = stats.canPlaceBombs;
+            canRegenerate = stats.canRegenerate;
+
+            finishedLevel = 0;
+            finishedObstacleLevel = 0;
+            
+            upgradeCostHealth = 10f;
+            upgradeCostDamage = 10f;
+            upgradeCostSpeed = 10f;
+            upgradeCostBoostTime = 10f;
+            upgradeCostDash = 10f;
+            upgradeCostRegeneration = 10f;
+            upgradeCostBombs = 10f;
+    
+            healthMax = false;
+            damageMax = false;
+            speedMax = false;
+            boostTimeMax = false;
+            dashMax = false;
+            bombsMax = false;
+            regenerationMax = false;      
+
+            yield return new WaitForSeconds(20f);
+        }
+        
+
+    } */
 }

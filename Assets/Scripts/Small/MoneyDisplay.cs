@@ -15,6 +15,11 @@ public class MoneyDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (UpgradeManager.instance == null)
+        {
+            return;
+        }
+        
         moneyText.text = UpgradeManager.instance.money.ToString();
     }
 }

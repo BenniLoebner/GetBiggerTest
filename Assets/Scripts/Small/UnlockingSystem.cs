@@ -19,13 +19,28 @@ public class UnlockingSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(UpgradeManager.instance.finishedLevel >= atLevelIndex)
+        if(Index == 0)
         {
-            myButton.interactable = true;
+            if(UpgradeManager.instance.finishedLevel >= atLevelIndex)
+            {
+                myButton.interactable = true;
+            }
+            else
+            {
+                myButton.interactable = false;
+            }
         }
-        else
+        
+        if(Index == 1)
         {
-            myButton.interactable = false;
-        }
+            if(UpgradeManager.instance.finishedObstacleLevel >= atLevelIndex)
+            {
+                myButton.interactable = true;
+            }
+            else
+            {
+                myButton.interactable = false;
+            }
+        }       
     }
 }
