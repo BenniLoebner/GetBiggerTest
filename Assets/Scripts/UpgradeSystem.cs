@@ -51,6 +51,10 @@ public class UpgradeSystem : MonoBehaviour
         {
             UpgradeManager.instance.moneyPlus = player.GetMoney();
         }
+        /* else 
+        {
+            UpgradeManager.instance.moneyPlus = 0f;
+        } */
     }
 
     public void UpdateMoney()
