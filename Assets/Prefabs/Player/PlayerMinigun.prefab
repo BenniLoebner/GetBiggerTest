@@ -170,19 +170,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runSpeed: 20
   health: 3
+  maxHealth: 1
   damage: 0.5
-  boosttime: 5
+  boostTime: 5
+  dashTime: 0.5
+  dashSpeed: 50
+  bombDamage: 5
+  regeneration: 5
+  coolDownRegeneration: 2
+  coolDownBombs: 2
+  coolDownDash: 2
+  money: 0
   explodeVFX: {fileID: 1410437915831713902, guid: 6dad0da15920e8043861f6a9d4ad079f,
     type: 3}
+  dashVFX: {fileID: 0}
   damageBoostVFX: {fileID: 1802328613060670971, guid: d75d43f702ab9054fa2a781d8f31e83e,
     type: 3}
-  myDamageBoostPrefab: {fileID: 418738054826220395, guid: 654e6a915f0b7e94b8187c5c56187063,
-    type: 3}
+  iceBoostVFX: {fileID: 0}
+  speedShootVFX: {fileID: 0}
+  regenerationSFX: {fileID: 0}
+  regenerationVFX: {fileID: 0}
+  healthMaxVFX: {fileID: 0}
   effektPoint: {fileID: 4844436725247474008}
+  dashSFX: {fileID: 0}
+  dashVolume: 0
+  bombPlaceSFX: {fileID: 0}
   pickUpSFX: {fileID: 8300000, guid: 991f427d6f647a843af2991440495711, type: 3}
+  powerUpSFX: {fileID: 0}
   explosionSFX: {fileID: 8300000, guid: 0bff83fa7c5b96842be5ccf7b028568d, type: 3}
   keySFX: {fileID: 8300000, guid: 9afbe136d7fda064fa9876d410eef5aa, type: 3}
   explosionSFXVolume: 0.6
+  defaultPlayerSprite: {fileID: 0}
+  myDamageBoostSprite: {fileID: 0}
+  iceBoostSprite: {fileID: 0}
+  regenerationSprite: {fileID: 0}
+  healthMaxSprite: {fileID: 0}
+  playerHurtSprite: {fileID: 0}
+  shootSpeedSprite: {fileID: 0}
+  joystickMove: {fileID: 0}
+  joystickAim: {fileID: 0}
+  aimPoint: {fileID: 0}
+  dashButton: {fileID: 0}
+  bombButton: {fileID: 0}
+  regenerationButton: {fileID: 0}
+  bomb: {fileID: 0}
   keys: 0
   cam: {fileID: 4313956117595828202, guid: a197d7f4214bf4143b0ff0d40d6eb73a, type: 3}
   wait1: 2

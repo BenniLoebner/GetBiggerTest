@@ -60,7 +60,6 @@ public class UpgradeManager : MonoBehaviour
     static void RunOnStart()
     {
         LoadUpgradeSettings();
-        Application.quitting += SaveUpgradeSettings;
     }
 
     static void LoadUpgradeSettings()
@@ -116,7 +115,7 @@ public class UpgradeManager : MonoBehaviour
         }
     }
 
-    static void SaveUpgradeSettings()
+    public static void SaveUpgradeSettings()
     {
         if(instance == null)
         {

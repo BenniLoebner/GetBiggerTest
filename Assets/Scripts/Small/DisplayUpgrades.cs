@@ -9,14 +9,12 @@ public class DisplayUpgrades : MonoBehaviour
     UpgradeSystem myUpgradeSystem;
 
     [SerializeField] int Upgrades = 0;
-    // Start is called before the first frame update
     void Start()
     {
         myUpgradeSystem = FindObjectOfType<UpgradeSystem>();
         UpgradeText = GetComponent<TextMeshProUGUI>();
     }
 
-    // Update is called once per frame
     void Update()
     {       
         if(Upgrades == 0)

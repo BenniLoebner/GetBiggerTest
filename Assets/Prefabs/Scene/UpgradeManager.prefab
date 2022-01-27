@@ -44,15 +44,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runSpeed: 25
+  showSpeed: 1
   health: 1
+  showHealth: 1
   damage: 1
+  showDamage: 1
   boostTime: 5
+  showBoostTime: 1
   dashSpeed: 50
+  showDash: 1
   bombDamage: 5
+  showBombs: 1
   regeneration: 2
+  showRegeneration: 1
   coolDownRegeneration: 60
   coolDownBombs: 60
   coolDownDash: 60
+  money: 0
+  moneyPlus: 0
   canDash: 0
   canPlaceBombs: 0
   canRegenerate: 0
+  finishedLevel: 0
+  finishedObstacleLevel: 0
+  upgradeCostHealth: 10
+  upgradeCostDamage: 10
+  upgradeCostSpeed: 10
+  upgradeCostBoostTime: 10
+  upgradeCostDash: 10
+  upgradeCostRegeneration: 10
+  upgradeCostBombs: 10
+  healthMax: 0
+  damageMax: 0
+  speedMax: 0
+  boostTimeMax: 0
+  dashMax: 0
+  bombsMax: 0
+  regenerationMax: 0

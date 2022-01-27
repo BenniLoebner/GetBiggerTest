@@ -343,6 +343,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   atLevelIndex: 3
+  Index: 0
 --- !u!1 &148217424
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,6 +397,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   atLevelIndex: 20
+  Index: 0
 --- !u!114 &148217427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -616,6 +618,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   atLevelIndex: 22
+  Index: 0
 --- !u!114 &171587766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -836,6 +839,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   atLevelIndex: 14
+  Index: 0
 --- !u!114 &177736411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1252,6 +1256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   atLevelIndex: 11
+  Index: 0
 --- !u!114 &226094256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1855,6 +1860,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   atLevelIndex: 1
+  Index: 0
 --- !u!1001 &658300617
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2133,6 +2139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   atLevelIndex: 23
+  Index: 0
 --- !u!114 &743690251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2520,6 +2527,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   atLevelIndex: 6
+  Index: 0
 --- !u!1 &1052017350
 GameObject:
   m_ObjectHideFlags: 0
@@ -2573,6 +2581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   atLevelIndex: 19
+  Index: 0
 --- !u!114 &1052017353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2793,6 +2802,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   atLevelIndex: 21
+  Index: 0
 --- !u!114 &1078341752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3180,6 +3190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   atLevelIndex: 2
+  Index: 0
 --- !u!1 &1165322182
 GameObject:
   m_ObjectHideFlags: 0
@@ -3400,6 +3411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   atLevelIndex: 4
+  Index: 0
 --- !u!1 &1195551656
 GameObject:
   m_ObjectHideFlags: 0
@@ -3453,6 +3465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   atLevelIndex: 18
+  Index: 0
 --- !u!114 &1195551659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3840,6 +3853,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   atLevelIndex: 5
+  Index: 0
 --- !u!1 &1253121928
 GameObject:
   m_ObjectHideFlags: 0
@@ -3893,6 +3907,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   atLevelIndex: 17
+  Index: 0
 --- !u!114 &1253121931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4415,6 +4430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   atLevelIndex: 8
+  Index: 0
 --- !u!1 &1566685276
 GameObject:
   m_ObjectHideFlags: 0
@@ -4468,6 +4484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   atLevelIndex: 24
+  Index: 0
 --- !u!114 &1566685279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4688,6 +4705,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   atLevelIndex: 12
+  Index: 0
 --- !u!114 &1587547382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5075,6 +5093,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   atLevelIndex: 0
+  Index: 0
 --- !u!850595691 &1706765422
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -5189,6 +5208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   atLevelIndex: 10
+  Index: 0
 --- !u!114 &1730374680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5544,6 +5564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   atLevelIndex: 15
+  Index: 0
 --- !u!114 &2004743563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5764,6 +5785,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   atLevelIndex: 13
+  Index: 0
 --- !u!114 &2049401277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5984,6 +6006,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   atLevelIndex: 9
+  Index: 0
 --- !u!114 &2051134132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6273,6 +6296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   atLevelIndex: 16
+  Index: 0
 --- !u!114 &2131160675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6660,3 +6684,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   atLevelIndex: 7
+  Index: 0

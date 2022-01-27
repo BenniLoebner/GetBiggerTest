@@ -64,6 +64,7 @@ MonoBehaviour:
   enemyHurtSprite: {fileID: 21300000, guid: a6f525d7a5675c5469c496667d16c1ed, type: 3}
   slowEnemySprite: {fileID: 21300000, guid: 96eeea3c667693041a82c28725a663eb, type: 3}
   playerNormal: {fileID: 0}
+  money: {fileID: 0}
   wait: 0.01
 --- !u!50 &2505295987639128372
 Rigidbody2D:

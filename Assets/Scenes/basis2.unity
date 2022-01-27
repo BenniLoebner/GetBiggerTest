@@ -2863,6 +2863,16 @@ PrefabInstance:
       propertyPath: m_text
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1976409863128289276, guid: 8a0f6e2263f6a9d4ca66c8f8894af566,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2868726292899383827, guid: 8a0f6e2263f6a9d4ca66c8f8894af566,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3130944152306943531, guid: 8a0f6e2263f6a9d4ca66c8f8894af566,
         type: 3}
       propertyPath: m_Name
@@ -2987,6 +2997,21 @@ PrefabInstance:
         type: 3}
       propertyPath: playerMinigun
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3933584361929146319, guid: 8a0f6e2263f6a9d4ca66c8f8894af566,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6741024224823811543, guid: 8a0f6e2263f6a9d4ca66c8f8894af566,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8720063172708251591, guid: 8a0f6e2263f6a9d4ca66c8f8894af566,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a0f6e2263f6a9d4ca66c8f8894af566, type: 3}

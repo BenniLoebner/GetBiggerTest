@@ -28,6 +28,7 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _TintColor: {r: 0.87116134, g: 0.8961565, b: 0.9044118, a: 0.05882353}
+  m_BuildTextureStacks: []
 --- !u!1002 &2100001
 EditorExtensionImpl:
   serializedVersion: 6

@@ -18,8 +18,6 @@ public class ButtonSFX : MonoBehaviour
 
 
 
-    // Use this for initialization
-
     void Start () 
 
     {
@@ -37,8 +35,6 @@ public class ButtonSFX : MonoBehaviour
     }
 
     
-
-    // Update is called once per frame
 
     void PlaySoud ()
 

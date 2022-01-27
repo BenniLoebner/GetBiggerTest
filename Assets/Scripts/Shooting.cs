@@ -16,8 +16,10 @@ public class Shooting : MonoBehaviour
     GameObject bullet; 
     Coroutine shootCoroutine;
     Coroutine doNothingCoroutine;
+    Touch touch;
 
     bool shootActive = true;
+    bool allowToShoot = true;
 
     void Start()
     {
@@ -25,13 +27,22 @@ public class Shooting : MonoBehaviour
     }
 
     void Update()
-    {
-        if (CrossPlatformInputManager.GetButtonDown("Fire1") && shootActive == true)
+    {   
+        if(Input.touchCount == 0)
         {
-            shootCoroutine = StartCoroutine(ShootLong());
+            allowToShoot = true;
         }
-
-        if (CrossPlatformInputManager.GetButtonUp("Fire1") && shootActive == true)
+        if(Input.touchCount > 0)
+        {
+            touch = Input.GetTouch(0);
+            if (shootActive == true && allowToShoot == true)
+            {
+                shootCoroutine = StartCoroutine(ShootLong());
+                allowToShoot = false;
+            }
+        }
+          
+        if (Input.touchCount == 0 && shootActive == true)
         {
             StopCoroutine(shootCoroutine);
             StartCoroutine(MakeShootTrue());

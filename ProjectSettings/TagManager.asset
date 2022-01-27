@@ -18,6 +18,7 @@ TagManager:
   - Explosion
   - IceBoost
   - Money
+  - Fire
   layers:
   - Default
   - TransparentFX

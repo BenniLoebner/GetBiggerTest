@@ -15,7 +15,6 @@ public class EnemyAI : MonoBehaviour
 
     Seeker seeker;
     Rigidbody2D myRigidBody2D;
-    // Start is called before the first frame update
     void Start()
     {
         seeker = GetComponent<Seeker>();
@@ -38,7 +37,6 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         if (path == null)return;

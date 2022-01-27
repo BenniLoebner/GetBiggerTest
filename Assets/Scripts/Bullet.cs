@@ -15,7 +15,6 @@ public class Bullet : MonoBehaviour
         mySpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
     void Update()
     {
 

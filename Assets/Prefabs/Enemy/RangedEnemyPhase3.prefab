@@ -60,8 +60,11 @@ MonoBehaviour:
     type: 3}
   explodeSFX: {fileID: 8300000, guid: e7f61e4f20c13064c9bb6abca4f16f10, type: 3}
   explosionSFXVolume: 0.1
-  enemyHurt: {fileID: 0}
+  defaultEnemySprite: {fileID: 0}
+  enemyHurtSprite: {fileID: 0}
+  slowEnemySprite: {fileID: 0}
   playerNormal: {fileID: 0}
+  money: {fileID: 0}
   wait: 0.01
 --- !u!50 &2702218111593796871
 Rigidbody2D:

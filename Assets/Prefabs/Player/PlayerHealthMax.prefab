@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 839255351705906055}
   - component: {fileID: 7197764473299265090}
   m_Layer: 0
-  m_Name: PlayerSpeedShoot
+  m_Name: PlayerHealthMax
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

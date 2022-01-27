@@ -25,10 +25,4 @@ public class Bomb : MonoBehaviour
         Instantiate(explosionRadius, transform.position, Quaternion.identity);
         Instantiate(explodeVFX, transform.position, Quaternion.identity);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

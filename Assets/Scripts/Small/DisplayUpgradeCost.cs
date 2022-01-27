@@ -9,14 +9,12 @@ public class DisplayUpgradeCost : MonoBehaviour
     [SerializeField] float index = 0;
     TextMeshProUGUI upgradeText;
     UpgradeCost myUpgradeCost;
-    // Start is called before the first frame update
     void Start()
     {
         myUpgradeCost = FindObjectOfType<UpgradeCost>();
         upgradeText = GetComponent<TextMeshProUGUI>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(index == 0 && UpgradeManager.instance.healthMax == false)

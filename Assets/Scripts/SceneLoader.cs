@@ -65,6 +65,7 @@ public class SceneLoader : MonoBehaviour
 
     IEnumerator WaitForSoundNextlevel()
     {
+        UpgradeManager.SaveUpgradeSettings();
         int currentSceneIndex = mySelectedScene.GetLastScene();
         yield return new WaitForSeconds(.25f);
         SceneManager.LoadScene(currentSceneIndex + 1);
@@ -77,6 +78,7 @@ public class SceneLoader : MonoBehaviour
 
     IEnumerator WaitForSoundMainMenu()
     {
+        UpgradeManager.SaveUpgradeSettings();
         yield return new WaitForSeconds(.25f);
         SceneManager.LoadScene("Menu");
     }
@@ -88,6 +90,7 @@ public class SceneLoader : MonoBehaviour
 
     IEnumerator WaitForSoundLevels()
     {
+        UpgradeManager.SaveUpgradeSettings();
         yield return new WaitForSeconds(.25f);
         SceneManager.LoadScene("Levels");
     }
@@ -113,115 +116,4 @@ public class SceneLoader : MonoBehaviour
         yield return new WaitForSeconds(.25f);
         SceneManager.LoadScene(level);
     }
-
-   /*  public void LoadLevel2()
-    {
-        StartCoroutine(WaitForSound2());
-    }
-
-    IEnumerator WaitForSound2() 
-    {
-        yield return new WaitForSeconds(.25f);
-        SceneManager.LoadScene("Level2");
-    }
-
-    public void LoadLevel3()
-    {
-        StartCoroutine(WaitForSound3());
-    }
-
-    IEnumerator WaitForSound3() 
-    {
-        yield return new WaitForSeconds(.25f);
-        SceneManager.LoadScene("Level3");
-    }
-
-    public void LoadLevel4()
-    {
-        StartCoroutine(WaitForSound4());
-    }
-
-    IEnumerator WaitForSound4() 
-    {
-        yield return new WaitForSeconds(.25f);
-        SceneManager.LoadScene("Level4");
-    }
-
-    public void LoadLevel5()
-    {
-        StartCoroutine(WaitForSound5());
-    }
-
-    IEnumerator WaitForSound5() 
-    {
-        yield return new WaitForSeconds(.25f);
-        SceneManager.LoadScene("Level5");
-    }
-
-    public void LoadLevel6()
-    {
-        StartCoroutine(WaitForSound6());
-    }
-
-    IEnumerator WaitForSound6() 
-    {
-        yield return new WaitForSeconds(.25f);
-        SceneManager.LoadScene("Level6");
-    }
-
-    public void LoadLevel7()
-    {
-        StartCoroutine(WaitForSound7());
-    }
-
-    IEnumerator WaitForSound7() 
-    {
-        yield return new WaitForSeconds(.25f);
-        SceneManager.LoadScene("Level7");
-    }
-
-    public void LoadLevel8()
-    {
-        StartCoroutine(WaitForSound8());
-    }
-
-    IEnumerator WaitForSound8() 
-    {
-        yield return new WaitForSeconds(.25f);
-        SceneManager.LoadScene("Level8");
-    }
-
-    public void LoadLevel9()
-    {
-        StartCoroutine(WaitForSound9());
-    }
-
-    IEnumerator WaitForSound9() 
-    {
-        yield return new WaitForSeconds(.25f);
-        SceneManager.LoadScene("Level9");
-    }
-
-    public void LoadMazeLevels()
-    {
-        StartCoroutine(WaitForSoundMazeLevels());
-    }
-
-    IEnumerator WaitForSoundMazeLevels() 
-    {
-        yield return new WaitForSeconds(.25f);
-        SceneManager.LoadScene("MazeLevels");
-    }
-
-    public void LoadMaze1()
-    {
-        StartCoroutine(WaitForSoundMaze1());
-    }
-
-    IEnumerator WaitForSoundMaze1() 
-    {
-        yield return new WaitForSeconds(.25f);
-        SceneManager.LoadScene("Maze1");
-    }
- */
 }

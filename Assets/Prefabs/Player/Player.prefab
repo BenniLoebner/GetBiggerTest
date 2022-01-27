@@ -199,7 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a94419218160a045a887ec2b0850bb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeed: 25
+  runSpeed: 15
   health: 5
   maxHealth: 5
   damage: 1
@@ -244,6 +244,9 @@ MonoBehaviour:
   healthMaxSprite: {fileID: 21300000, guid: 2ddcaeac59edead4c99fb21d5073d56a, type: 3}
   playerHurtSprite: {fileID: 21300000, guid: d54dd3bcc0400294c9576343ee7f86f6, type: 3}
   shootSpeedSprite: {fileID: 21300000, guid: 530ac3e565df59b45b069223139cf263, type: 3}
+  joystickMove: {fileID: 0}
+  joystickAim: {fileID: 0}
+  aimPoint: {fileID: 0}
   dashButton: {fileID: 0}
   bombButton: {fileID: 0}
   regenerationButton: {fileID: 0}

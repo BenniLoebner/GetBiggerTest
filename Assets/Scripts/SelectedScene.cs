@@ -28,8 +28,6 @@ public class SelectedScene : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
     }
-
-    // Update is called once per frame
     void Update()
     {
         var activeScene = SceneManager.GetActiveScene();

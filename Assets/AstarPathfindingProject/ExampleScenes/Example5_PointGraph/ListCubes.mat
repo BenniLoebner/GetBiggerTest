@@ -29,6 +29,7 @@ Material:
     - _Color: {r: 0.33280504, g: 1, b: 0.17349565, a: 1}
     - _Emission: {r: 0.00048880256, g: 0.19897962, b: 0.04094714, a: 0}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 0}
+  m_BuildTextureStacks: []
 --- !u!1002 &2100001
 EditorExtensionImpl:
   serializedVersion: 6

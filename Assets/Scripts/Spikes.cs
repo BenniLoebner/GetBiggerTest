@@ -9,7 +9,6 @@ public class Spikes : MonoBehaviour
     [SerializeField] float timeInOut = 5f;
     [SerializeField] float volume = 1f;
     [SerializeField] AudioClip bladeOutSFX;
-    // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(SpikesOut());
@@ -25,11 +24,5 @@ public class Spikes : MonoBehaviour
             AudioSource.PlayClipAtPoint(bladeOutSFX, transform.position, volume);
             yield return new WaitForSeconds(timeInOut);
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

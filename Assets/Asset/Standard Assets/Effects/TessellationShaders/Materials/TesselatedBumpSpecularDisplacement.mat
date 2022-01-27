@@ -38,3 +38,4 @@ Material:
     m_Colors:
     - _Color: {r: 0.51492536, g: 0.51492536, b: 0.51492536, a: 1}
     - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_BuildTextureStacks: []

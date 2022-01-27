@@ -43,17 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9aa6c2145575314286afb6191e044b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeed: 25
-  health: 1
-  damage: 1
-  boostTime: 5
-  dashSpeed: 50
-  bombDamage: 5
-  regeneration: 2
-  coolDownRegeneration: 40
-  coolDownBombs: 40
-  coolDownDash: 40
-  myPrefab: {fileID: 5831153775450543600}
   newDash:
   - {fileID: 0}
   - {fileID: 0}

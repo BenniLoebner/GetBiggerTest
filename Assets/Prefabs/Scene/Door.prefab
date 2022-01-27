@@ -133,3 +133,5 @@ MonoBehaviour:
   money: []
   moneyForLevel: 1
   moneySpawn: {fileID: 4606194802689408905}
+  index: 1
+  LevelType: 0

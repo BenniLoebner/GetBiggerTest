@@ -27,6 +27,7 @@ public class UpgradeSystem : MonoBehaviour
         {
             foreach (GameObject obj in newDash)
             {
+                UpgradeManager.SaveUpgradeSettings();
                 obj.SetActive(true);
             }
         }
@@ -35,6 +36,7 @@ public class UpgradeSystem : MonoBehaviour
         {
             foreach (GameObject obj in newBombs)
             {
+                UpgradeManager.SaveUpgradeSettings();
                 obj.SetActive(true);
             }
         }
@@ -43,6 +45,7 @@ public class UpgradeSystem : MonoBehaviour
         {
             foreach (GameObject obj in newRegeneration)
             {
+                UpgradeManager.SaveUpgradeSettings();
                 obj.SetActive(true);
             }
         }
@@ -51,21 +54,18 @@ public class UpgradeSystem : MonoBehaviour
         {
             UpgradeManager.instance.moneyPlus = player.GetMoney();
         }
-        /* else 
-        {
-            UpgradeManager.instance.moneyPlus = 0f;
-        } */
     }
 
     public void UpdateMoney()
     {
-        UpgradeManager.instance.money += UpgradeManager.instance.moneyPlus;
+        UpgradeManager.instance.money = UpgradeManager.instance.moneyPlus;
     }
 
     public void UpgradeHealth()
     {
         if(UpgradeManager.instance.showHealth < 10)
         {
+            UpgradeManager.SaveUpgradeSettings();
             UpgradeManager.instance.health += 1;
             UpgradeManager.instance.showHealth += 1;
         }
@@ -79,6 +79,7 @@ public class UpgradeSystem : MonoBehaviour
     {
         if(UpgradeManager.instance.showDamage < 10)
         {
+            UpgradeManager.SaveUpgradeSettings();
             UpgradeManager.instance.damage += 1;
             UpgradeManager.instance.showDamage += 1;
         }      
@@ -92,6 +93,7 @@ public class UpgradeSystem : MonoBehaviour
     {
         if(UpgradeManager.instance.showBoostTime < 10)
         {
+            UpgradeManager.SaveUpgradeSettings();
             UpgradeManager.instance.boostTime += 1;
             UpgradeManager.instance.showBoostTime += 1;
         }
@@ -105,6 +107,7 @@ public class UpgradeSystem : MonoBehaviour
     {
         if(UpgradeManager.instance.showSpeed < 10)
         {
+            UpgradeManager.SaveUpgradeSettings();
             UpgradeManager.instance.runSpeed -= 0.1f;
             UpgradeManager.instance.showSpeed += 1;
         }
@@ -118,6 +121,7 @@ public class UpgradeSystem : MonoBehaviour
     {
         if(UpgradeManager.instance.showDash < 10)
         {
+            UpgradeManager.SaveUpgradeSettings();
             UpgradeManager.instance.dashSpeed += 1;
             UpgradeManager.instance.coolDownDash -= 2;
             UpgradeManager.instance.showDash += 1;
@@ -132,6 +136,7 @@ public class UpgradeSystem : MonoBehaviour
     {
         if(UpgradeManager.instance.showBombs < 10)
         {
+            UpgradeManager.SaveUpgradeSettings();
             UpgradeManager.instance.bombDamage += 1;
             UpgradeManager.instance.coolDownBombs -= 2;
             UpgradeManager.instance.showBombs += 1;
@@ -146,6 +151,7 @@ public class UpgradeSystem : MonoBehaviour
     {
         if(UpgradeManager.instance.showRegeneration < 10)
         {
+            UpgradeManager.SaveUpgradeSettings();
             UpgradeManager.instance.regeneration += 1;
             UpgradeManager.instance.coolDownRegeneration -= 2;
             UpgradeManager.instance.showRegeneration += 1;

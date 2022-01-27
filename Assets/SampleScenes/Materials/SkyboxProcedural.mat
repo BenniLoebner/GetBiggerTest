@@ -90,3 +90,4 @@ Material:
     - _SkyTopColor: {r: 0.08742432, g: 0.11787318, b: 0.1544118, a: 1}
     - _SpecularColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
     - _SunTint: {r: 0.99607843, g: 0.99607843, b: 0.99607843, a: 1}
+  m_BuildTextureStacks: []

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityEngine.SceneManagement;
-
+using System.ComponentModel;
 
 public class Player : MonoBehaviour
 {
@@ -78,6 +78,7 @@ public class Player : MonoBehaviour
     bool canDash;
     bool canPlaceBombs;
     bool canRegenerate;
+    bool shoot = false;
 
     HealthBar healthBar;
     SpriteRenderer mySpriteRenderer;
@@ -250,19 +251,14 @@ public class Player : MonoBehaviour
 
     private void Aim()
     {
-        // Initial try
-        //Vector2 mousePosition = cam.ScreenToWorldPoint(CrossPlatformInputManager.mousePosition);
-        //Vector2 lookDir = mousePosition - myRigidbody.position;
+
+        if (joystickAim.Direction != Vector2.zero)
+        {
+            var lookDir = joystickAim.Direction;
         
-        // Second try
-        //Vector2 joystickAimPosition = transform.TransformPoint(new Vector2(joystickAim.Horizontal, joystickAim.Vertical));
-        //Vector2 lookDir = joystickAimPosition - myRigidbody.position;
-        
-        // Third try
-        var lookDir = joystickAim.Direction;
-        
-        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
-        myRigidbody.rotation = angle - 180f;
+            float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
+            myRigidbody.rotation = angle - 180f;
+        }
     }
 
     private void Move()
