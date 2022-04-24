@@ -44,7 +44,10 @@ public class Shooting : MonoBehaviour
           
         if (Input.touchCount == 0 && shootActive == true)
         {
-            StopCoroutine(shootCoroutine);
+            if (shootCoroutine != null)
+            {
+                StopCoroutine(shootCoroutine);
+            }
             StartCoroutine(MakeShootTrue());
         }
     }

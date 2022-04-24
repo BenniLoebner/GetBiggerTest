@@ -271,11 +271,25 @@ public class Player : MonoBehaviour
         myRigidbody.velocity = playerVelocity;
     }
 
+   /*  public IEnumerator Knockback(float knockbackDuration, float knockbackPower, Transform Object)
+    {
+        float timer = 0;
+        while (knockbackDuration > timer)
+        {
+            timer += Time.deltaTime;
+            Vector2 direction = (Object.transform.position - this.transform.position).normalized;
+            myRigidbody.AddForce(-direction * knockbackPower);
+        }
+        yield return 0;
+    } */
+
     private void OnTriggerEnter2D(Collider2D collider2D)
     {
         if (collider2D.tag =="Wall")
         {
             StartCoroutine(DestroyPlayer());
+            //health -= 1;
+            //StartCoroutine(Hurt());
         }
 
         if  (collider2D.tag =="PickUp")
@@ -389,7 +403,10 @@ public class Player : MonoBehaviour
     {
         mySpriteRenderer.sprite = playerHurtSprite;
         yield return new WaitForSeconds(.175f);
-        mySpriteRenderer.sprite = defaultPlayerSprite;
+        if(mySpriteRenderer != null)
+        {
+            mySpriteRenderer.sprite = defaultPlayerSprite;
+        }    
     }
 
     IEnumerator DamageBoost()

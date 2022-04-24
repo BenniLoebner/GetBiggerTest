@@ -520,6 +520,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 352591390}
   m_RootOrder: 0
@@ -717,6 +718,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 226350502}
   - {fileID: 1699508613}
@@ -1114,22 +1116,22 @@ PrefabInstance:
     - target: {fileID: 3034361053020344817, guid: b0fef6d2a9a034746ac11125a1db9a14,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3034361053020344817, guid: b0fef6d2a9a034746ac11125a1db9a14,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3034361053020344817, guid: b0fef6d2a9a034746ac11125a1db9a14,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3034361053020344817, guid: b0fef6d2a9a034746ac11125a1db9a14,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3034361053020344817, guid: b0fef6d2a9a034746ac11125a1db9a14,
         type: 3}
@@ -1179,12 +1181,12 @@ PrefabInstance:
     - target: {fileID: 3034361053020344817, guid: b0fef6d2a9a034746ac11125a1db9a14,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -633.5106
+      value: 326.48938
       objectReference: {fileID: 0}
     - target: {fileID: 3034361053020344817, guid: b0fef6d2a9a034746ac11125a1db9a14,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -471.19995
+      value: 68.80005
       objectReference: {fileID: 0}
     - target: {fileID: 3034361053020344817, guid: b0fef6d2a9a034746ac11125a1db9a14,
         type: 3}
@@ -1276,6 +1278,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4

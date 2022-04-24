@@ -58,7 +58,12 @@ public class UpgradeSystem : MonoBehaviour
 
     public void UpdateMoney()
     {
-        UpgradeManager.instance.money = UpgradeManager.instance.moneyPlus;
+        if (UpgradeManager.instance == null)
+        {
+            return;
+        }
+        
+        UpgradeManager.instance.money += UpgradeManager.instance.moneyPlus;
     }
 
     public void UpgradeHealth()
