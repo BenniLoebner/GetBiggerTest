@@ -1,0 +1,11 @@
+To debug C# code for Unity do the following:
+
+How to start the Unity game:
+In the Project area on the bottom left choose:
+- Assets -> Scenes -> Intro1 (by double-clicking on Intro1)
+And then click the start button
+
+
+In Visual Studio Code:
+- Ctrl+Shift+P
+- Choose "Attach Unity Debugger"

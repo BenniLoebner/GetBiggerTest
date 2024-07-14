@@ -52,66 +52,70 @@ public class UpgradeManager : MonoBehaviour
     public bool regenerationMax = false;
     Player player;
 
-    private static string settingsFileName = "upgradeSettings.upgs";
+    private static readonly string settingsFileName = "upgradeSettings.upgs";
     
     #region SaveLoad Upgrade Settings
 
-    [RuntimeInitializeOnLoadMethod]
+/*     [RuntimeInitializeOnLoadMethod]
     static void RunOnStart()
     {
-        LoadUpgradeSettings();
+        //LoadUpgradeSettings();
+        //Application.quitting += SaveUpgradeSettings;
     }
-
+ */
     static void LoadUpgradeSettings()
     {
         string path = $"{Application.persistentDataPath}/{settingsFileName}";
         if (File.Exists(path))
         {
-            BinaryFormatter formatter = new BinaryFormatter();
+            BinaryFormatter formatter = new();
             using var stream = new FileStream(path, FileMode.Open);
             UpgradeData data = formatter.Deserialize(stream) as UpgradeData;
 
-            instance.runSpeed = data.runSpeed;
-            instance.showSpeed = data.showSpeed;
-            instance.health = data.health;
-            instance.showHealth = data.showHealth;
-            instance.damage = data.damage;
-            instance.showDamage = data.showDamage;
-            instance.boostTime = data.boostTime;
-            instance.showBoostTime = data.showBoostTime;
-            instance.dashSpeed = data.dashSpeed;
-            instance.showDash = data.showDash;
-            instance.bombDamage = data.bombDamage;
-            instance.showBombs = data.showBombs;
-            instance.regeneration = data.regeneration;
-            instance.showRegeneration = data.showRegeneration;
-            instance.coolDownRegeneration = data.coolDownRegeneration;
-            instance.coolDownBombs = data.coolDownBombs;
-            instance.coolDownDash = data.coolDownDash;
-            instance.money = data.money;
-            instance.moneyPlus = data.moneyPlus;
-            instance.canDash = data.canDash;
-            instance.canPlaceBombs = data.canPlaceBombs;
-            instance.canRegenerate = data.canRegenerate;
+            if (instance)
+            {
+                instance.runSpeed = data.runSpeed;
+                instance.showSpeed = data.showSpeed;
+                instance.health = data.health;
+                instance.showHealth = data.showHealth;
+                instance.damage = data.damage;
+                instance.showDamage = data.showDamage;
+                instance.boostTime = data.boostTime;
+                instance.showBoostTime = data.showBoostTime;
+                instance.dashSpeed = data.dashSpeed;
+                instance.showDash = data.showDash;
+                instance.bombDamage = data.bombDamage;
+                instance.showBombs = data.showBombs;
+                instance.regeneration = data.regeneration;
+                instance.showRegeneration = data.showRegeneration;
+                instance.coolDownRegeneration = data.coolDownRegeneration;
+                instance.coolDownBombs = data.coolDownBombs;
+                instance.coolDownDash = data.coolDownDash;
+                instance.money = data.money;
+                instance.moneyPlus = data.moneyPlus;
+                instance.canDash = data.canDash;
+                instance.canPlaceBombs = data.canPlaceBombs;
+                instance.canRegenerate = data.canRegenerate;
 
-            instance.finishedLevel = data.finishedLevel;
-            instance.finishedObstacleLevel = data.finishedObstacleLevel;
+                instance.finishedLevel = data.finishedLevel;
+                instance.finishedObstacleLevel = data.finishedObstacleLevel;
 
-            instance.upgradeCostHealth = data.upgradeCostHealth;
-            instance.upgradeCostDamage = data.upgradeCostDamage;
-            instance.upgradeCostSpeed = data.upgradeCostSpeed;
-            instance.upgradeCostBoostTime = data.upgradeCostBoostTime;
-            instance.upgradeCostDash = data.upgradeCostDash;
-            instance.upgradeCostRegeneration = data.upgradeCostRegeneration;
-            instance.upgradeCostBombs = data.upgradeCostBombs;
-            instance.healthMax = data.healthMax;
-            instance.damageMax = data.damageMax;
-            instance.speedMax = data.speedMax;
-            instance.boostTimeMax = data.boostTimeMax;
-            instance.dashMax = data.dashMax;
-            instance.bombsMax = data.bombsMax;
-            instance.regenerationMax = data.regenerationMax;
-            Debug.Log($"Loaded upgrade settings from {path}");
+                instance.upgradeCostHealth = data.upgradeCostHealth;
+                instance.upgradeCostDamage = data.upgradeCostDamage;
+                instance.upgradeCostSpeed = data.upgradeCostSpeed;
+                instance.upgradeCostBoostTime = data.upgradeCostBoostTime;
+                instance.upgradeCostDash = data.upgradeCostDash;
+                instance.upgradeCostRegeneration = data.upgradeCostRegeneration;
+                instance.upgradeCostBombs = data.upgradeCostBombs;
+                instance.healthMax = data.healthMax;
+                instance.damageMax = data.damageMax;
+                instance.speedMax = data.speedMax;
+                instance.boostTimeMax = data.boostTimeMax;
+                instance.dashMax = data.dashMax;
+                instance.bombsMax = data.bombsMax;
+                instance.regenerationMax = data.regenerationMax;
+                Debug.Log($"Loaded upgrade settings from {path}");
+            }
         }
     }
 
@@ -140,6 +144,8 @@ public class UpgradeManager : MonoBehaviour
         if(instance == null)
         {
             instance = this;
+            LoadUpgradeSettings();
+            Application.quitting += SaveUpgradeSettings;
         }
 
         if(instance != this)
