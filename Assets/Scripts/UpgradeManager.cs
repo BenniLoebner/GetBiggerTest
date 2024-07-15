@@ -56,13 +56,6 @@ public class UpgradeManager : MonoBehaviour
     
     #region SaveLoad Upgrade Settings
 
-/*     [RuntimeInitializeOnLoadMethod]
-    static void RunOnStart()
-    {
-        //LoadUpgradeSettings();
-        //Application.quitting += SaveUpgradeSettings;
-    }
- */
     static void LoadUpgradeSettings()
     {
         string path = $"{Application.persistentDataPath}/{settingsFileName}";
